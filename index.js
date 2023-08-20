@@ -112,3 +112,65 @@ ReactDOM.render(
   </h1>,
   document.getElementById("root")
 );
+
+// customStyle.color = "violet";
+
+// ReactDOM.render(
+//   <div>
+//     <h1 style={{ color: "green" }}> Hi I applied inline styling for this </h1>
+//     <p style={customStyle}> Hi Bro This is a paragraph! </p>
+//   </div>,
+//   document.getElementById("root")
+// );
+
+// CREATE A REACT APP FROM STRATCH
+// SHOW A SINGLE H1 THAT SAYS "GOOD MORNING" IF BETWEEN MIDNIGHT AND 12PM
+// OR "GOOD AFTERNOON" IF BETWEEN 12PM AND 6PM
+// OR "GOOD EVENING" IF BETWEEN 6PM AND MIDNIGHT
+// APPLY THE "heading" STYLE IN THE style.css
+// DYNAMICALLY CHANGE THE COLOR OF h1 USING INLINE CSS STYLE
+// MORNING = RED , AFTERNOON = GREEN , NIGHT = BLUE
+
+// var date = new Date();
+// console.log(date);
+
+// ReactDOM.render(<h1>hi this is knnc</h1>, document.getElementById("root"));
+
+// IMPORTS AND EXPORTS
+
+// import App from "./App";
+
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+// TYPE 1
+// import pi, { doublePi, triplePi } from "./math.js";
+
+// TYPE 2
+// import * as pi from "./math.js";
+
+// ReactDOM.render(
+//   // <ul>
+//   //   <li> {pi} </li>
+//   //   <li> {doublePi()} </li>
+//   //   <li> {triplePi()} </li>
+//   // </ul>,
+//   <ul>
+//     <li> {pi.default} </li>
+//     <li> {pi.doublePi()} </li>
+//     <li> {pi.triplePi()} </li>
+//   </ul>,
+//   document.getElementById("root")
+// );
+
+import * as math from "./math.js";
+
+ReactDOM.render(
+  <ul>
+    <li> {math.add(1, 2)} </li>
+    <li> {math.multiply(2, 3)} </li>
+    <li> {math.subtract(7, 2)} </li>
+    <li> {math.divide(5, 2)} </li>
+  </ul>,
+  document.getElementById("root")
+);
+
